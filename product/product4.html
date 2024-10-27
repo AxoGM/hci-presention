@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic T-Shirt Product Page</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+            }
+            .gradient-bg {
+                background: linear-gradient(90deg, #7928ca, #ff0080);
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 flex flex-col items-center p-4">
+        <!-- Navigation Bar -->
+        <div
+            class="bg-gray-300 p-4 rounded-lg flex items-center w-full max-w-4xl mb-6 shadow-lg"
+        >
+            <a href="../reg.html">
+                <div
+                    class="w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-500 rounded-full"
+                ></div>
+            </a>
+            <div class="ml-auto flex space-x-4">
+                <a href="../index.html">
+                    <button
+                        class="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-lg"
+                    >
+                        Home
+                    </button>
+                </a>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 px-4 rounded-lg"
+                >
+                    Contact
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Section -->
+        <div class="w-full max-w-3xl bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-6">
+                <img
+                    src="../img/4.png"
+                    alt="T-Shirt"
+                    class="w-32 h-32 rounded-lg object-cover"
+                />
+                <div>
+                    <h1 class="text-3xl font-semibold">Basic T-Shirt</h1>
+                    <p class="text-xl text-gray-700">Price: RM26.20</p>
+                    <p class="text-lg font-medium text-gray-500">
+                        Rate <span class="text-yellow-500">★★★★☆</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex space-x-4 mt-4">
+                <button
+                    id="cart-btn"
+                    class="w-full text-white font-semibold py-2 rounded-full gradient-bg"
+                >
+                    Cart
+                </button>
+                <button
+                    id="buy-btn"
+                    class="w-full text-white font-semibold py-2 rounded-full gradient-bg"
+                >
+                    Buy
+                </button>
+            </div>
+
+            <!-- Description Section -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold">Description</h2>
+                <div class="bg-gray-200 h-24 rounded-lg mt-2"></div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold">Comment</h2>
+                <div class="flex items-start space-x-4 mt-4">
+                    <div class="w-12 h-12 rounded-full gradient-bg"></div>
+                    <div class="bg-gray-200 p-4 rounded-lg w-full">
+                        <p class="font-semibold">Comment 1</p>
+                        <p class="text-sm font-medium text-gray-500">
+                            Rate <span class="text-yellow-500">★★★★☆</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery Script for Button Clicks -->
+        <script>
+            $(document).ready(function () {
+                $("#cart-btn").click(function () {
+                    alert("Added to cart!");
+                });
+                $("#buy-btn").click(function () {
+                    alert("Proceeding to buy!");
+                });
+            });
+        </script>
+    </body>
+</html>
